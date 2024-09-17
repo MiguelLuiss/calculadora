@@ -29,26 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            pictureBox1 = new PictureBox();
             progressBar1 = new ProgressBar();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-3, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(424, 453);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // progressBar1
             // 
-            progressBar1.BackColor = Color.Lime;
-            progressBar1.Location = new Point(427, 133);
+            progressBar1.BackColor = Color.FromArgb(128, 255, 255);
+            progressBar1.Cursor = Cursors.AppStarting;
+            progressBar1.ForeColor = Color.FromArgb(128, 255, 255);
+            progressBar1.Location = new Point(422, 133);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(366, 54);
             progressBar1.TabIndex = 1;
@@ -65,17 +57,29 @@
             label1.TabIndex = 2;
             label1.Text = "CARREGANDO...";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 49);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(400, 400);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightCyan;
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(progressBar1);
-            Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Carregamento...";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -83,9 +87,8 @@
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private ProgressBar progressBar1;
         private Label label1;
+        private PictureBox pictureBox1;
     }
 }
