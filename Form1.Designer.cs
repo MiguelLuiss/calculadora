@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             progressBar1 = new ProgressBar();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            tmr_progressbar = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -44,7 +46,6 @@
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(366, 54);
             progressBar1.TabIndex = 1;
-            progressBar1.Value = 100;
             progressBar1.Click += progressBar1_Click;
             // 
             // label1
@@ -67,12 +68,17 @@
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
+            // tmr_progressbar
+            // 
+            tmr_progressbar.Enabled = true;
+            tmr_progressbar.Tick += tmr_progressbar_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(806, 451);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(progressBar1);
@@ -90,5 +96,6 @@
         private ProgressBar progressBar1;
         private Label label1;
         private PictureBox pictureBox1;
+        private System.Windows.Forms.Timer tmr_progressbar;
     }
 }
