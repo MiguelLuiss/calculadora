@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            textBox1 = new TextBox();
+            textVisor = new TextBox();
             numero1 = new Button();
             numero2 = new Button();
             numero3 = new Button();
@@ -46,6 +46,7 @@
             adicao = new Button();
             divisao = new Button();
             multiplicacao = new Button();
+            cls = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -69,14 +70,14 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // textVisor
             // 
-            textBox1.BackColor = SystemColors.InactiveCaption;
-            textBox1.Location = new Point(319, 30);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(321, 48);
-            textBox1.TabIndex = 2;
+            textVisor.BackColor = SystemColors.InactiveCaption;
+            textVisor.Location = new Point(319, 30);
+            textVisor.Multiline = true;
+            textVisor.Name = "textVisor";
+            textVisor.Size = new Size(321, 48);
+            textVisor.TabIndex = 2;
             // 
             // numero1
             // 
@@ -86,6 +87,7 @@
             numero1.TabIndex = 3;
             numero1.Text = "1";
             numero1.UseVisualStyleBackColor = true;
+            numero1.Click += numero1_Click;
             // 
             // numero2
             // 
@@ -95,6 +97,7 @@
             numero2.TabIndex = 4;
             numero2.Text = "2";
             numero2.UseVisualStyleBackColor = true;
+            numero2.Click += numero2_Click;
             // 
             // numero3
             // 
@@ -104,6 +107,7 @@
             numero3.TabIndex = 5;
             numero3.Text = "3";
             numero3.UseVisualStyleBackColor = true;
+            numero3.Click += numero3_Click;
             // 
             // numero4
             // 
@@ -113,6 +117,7 @@
             numero4.TabIndex = 6;
             numero4.Text = "4";
             numero4.UseVisualStyleBackColor = true;
+            numero4.Click += numero4_Click;
             // 
             // numero5
             // 
@@ -122,6 +127,7 @@
             numero5.TabIndex = 7;
             numero5.Text = "5";
             numero5.UseVisualStyleBackColor = true;
+            numero5.Click += numero5_Click;
             // 
             // numero6
             // 
@@ -131,6 +137,7 @@
             numero6.TabIndex = 8;
             numero6.Text = "6";
             numero6.UseVisualStyleBackColor = true;
+            numero6.Click += numero6_Click;
             // 
             // numero7
             // 
@@ -140,6 +147,7 @@
             numero7.TabIndex = 9;
             numero7.Text = "7";
             numero7.UseVisualStyleBackColor = true;
+            numero7.Click += numero7_Click;
             // 
             // numero8
             // 
@@ -149,6 +157,7 @@
             numero8.TabIndex = 10;
             numero8.Text = "8";
             numero8.UseVisualStyleBackColor = true;
+            numero8.Click += numero8_Click;
             // 
             // numero9
             // 
@@ -158,6 +167,7 @@
             numero9.TabIndex = 11;
             numero9.Text = "9";
             numero9.UseVisualStyleBackColor = true;
+            numero9.Click += numero9_Click;
             // 
             // numero0
             // 
@@ -167,6 +177,7 @@
             numero0.TabIndex = 12;
             numero0.Text = "0";
             numero0.UseVisualStyleBackColor = true;
+            numero0.Click += numero0_Click;
             // 
             // button11
             // 
@@ -177,6 +188,7 @@
             button11.TabIndex = 13;
             button11.Text = "=";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // adicao
             // 
@@ -187,6 +199,7 @@
             adicao.TabIndex = 14;
             adicao.Text = "+";
             adicao.UseVisualStyleBackColor = true;
+            adicao.Click += adicao_Click;
             // 
             // divisao
             // 
@@ -197,6 +210,7 @@
             divisao.TabIndex = 15;
             divisao.Text = "/";
             divisao.UseVisualStyleBackColor = true;
+            divisao.Click += divisao_Click;
             // 
             // multiplicacao
             // 
@@ -207,12 +221,25 @@
             multiplicacao.TabIndex = 16;
             multiplicacao.Text = "X";
             multiplicacao.UseVisualStyleBackColor = true;
+            multiplicacao.Click += multiplicacao_Click;
+            // 
+            // cls
+            // 
+            cls.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cls.Location = new Point(653, 375);
+            cls.Name = "cls";
+            cls.Size = new Size(135, 63);
+            cls.TabIndex = 17;
+            cls.Text = "CLS";
+            cls.UseVisualStyleBackColor = true;
+            cls.Click += cls_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(cls);
             Controls.Add(multiplicacao);
             Controls.Add(divisao);
             Controls.Add(adicao);
@@ -227,7 +254,7 @@
             Controls.Add(numero3);
             Controls.Add(numero2);
             Controls.Add(numero1);
-            Controls.Add(textBox1);
+            Controls.Add(textVisor);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "Form2";
@@ -242,7 +269,7 @@
 
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private TextBox textBox1;
+        private TextBox textVisor;
         private Button numero1;
         private Button numero2;
         private Button numero3;
@@ -257,5 +284,6 @@
         private Button adicao;
         private Button divisao;
         private Button multiplicacao;
+        private Button cls;
     }
 }
