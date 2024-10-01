@@ -42,9 +42,10 @@
             progressBar1.BackColor = Color.FromArgb(128, 255, 255);
             progressBar1.Cursor = Cursors.AppStarting;
             progressBar1.ForeColor = Color.FromArgb(128, 255, 255);
-            progressBar1.Location = new Point(422, 133);
+            progressBar1.Location = new Point(482, 177);
+            progressBar1.Margin = new Padding(3, 4, 3, 4);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(366, 54);
+            progressBar1.Size = new Size(418, 72);
             progressBar1.TabIndex = 1;
             progressBar1.Click += progressBar1_Click;
             // 
@@ -52,16 +53,17 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(510, 98);
+            label1.Location = new Point(583, 131);
             label1.Name = "label1";
-            label1.Size = new Size(200, 32);
+            label1.Size = new Size(248, 41);
             label1.TabIndex = 2;
             label1.Text = "CARREGANDO...";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 49);
+            pictureBox1.Location = new Point(0, 65);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(400, 400);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -75,15 +77,16 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(806, 451);
+            ClientSize = new Size(921, 601);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(progressBar1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Carregamento...";
