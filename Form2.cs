@@ -14,7 +14,7 @@ namespace calculadora
     {
         float valor1 = 0;
         string operacao = "";
-        float resultado = 0 ;
+        float resultado = 0;
         public Form2()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace calculadora
         private void numero2_Click(object sender, EventArgs e)
         {
             textVisor.AppendText("2");
-            
+
         }
 
         private void numero3_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace calculadora
 
         private void adicao_Click(object sender, EventArgs e)
         {
-            valor1 = Convert.ToInt32(textVisor.Text);
+            valor1 = Convert.ToSingle(textVisor.Text);
             textVisor.AppendText("+");
             operacao = "adição";
         }
@@ -88,9 +88,10 @@ namespace calculadora
 
         private void multiplicacao_Click(object sender, EventArgs e)
         {
-            valor1 = Convert.ToInt32(textVisor.Text);
+            valor1 = Convert.ToSingle(textVisor.Text);
             textVisor.AppendText("x");
             operacao = "multiplicação";
+            textVisor.Clear();
         }
 
         private void cls_Click(object sender, EventArgs e)
@@ -100,11 +101,32 @@ namespace calculadora
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if(this.operacao == "soma")
+            if (this.operacao == "soma")
             {
                 float resultado = valor1 + Convert.ToSingle(textVisor.Text);
-                textVisor.Text = Convert.ToString(resultado); 
+                textVisor.Text = Convert.ToString(resultado);
             }
+        }
+
+        private void menuConversor_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void menuConversor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cParaFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
