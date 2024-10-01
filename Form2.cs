@@ -24,6 +24,7 @@ namespace calculadora
         {
             textVisor.Text = textVisor.Text + "1";
 
+
         }
 
         private void numero2_Click(object sender, EventArgs e)
@@ -75,21 +76,23 @@ namespace calculadora
         private void adicao_Click(object sender, EventArgs e)
         {
             valor1 = Convert.ToSingle(textVisor.Text);
-            textVisor.AppendText("+");
+
             operacao = "adição";
+            textVisor.Clear();
         }
 
         private void divisao_Click(object sender, EventArgs e)
         {
-            valor1 = Convert.ToInt32(textVisor.Text);
-            textVisor.AppendText("/");
+            valor1 = Convert.ToSingle(textVisor.Text);
+
             operacao = "divisão";
+            textVisor.Clear();
         }
 
         private void multiplicacao_Click(object sender, EventArgs e)
         {
             valor1 = Convert.ToSingle(textVisor.Text);
-            textVisor.AppendText("x");
+
             operacao = "multiplicação";
             textVisor.Clear();
         }
@@ -101,9 +104,21 @@ namespace calculadora
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (this.operacao == "soma")
+            if (this.operacao == "adição")
             {
                 float resultado = valor1 + Convert.ToSingle(textVisor.Text);
+                textVisor.Text = Convert.ToString(resultado);
+            }
+
+            if (this.operacao == "multiplicação")
+            {
+                float resultado = valor1 * Convert.ToSingle(textVisor.Text);
+                textVisor.Text = Convert.ToString(resultado);
+            }
+
+            if (this.operacao == "divisão")
+            {
+                float resultado = valor1 / Convert.ToSingle(textVisor.Text);
                 textVisor.Text = Convert.ToString(resultado);
             }
         }
@@ -127,6 +142,12 @@ namespace calculadora
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmParaPolegadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            conversor Conversor = new conversor();
+            Conversor.ShowDialog();
         }
     }
 }
